@@ -25,6 +25,10 @@ import { registerTransformTools } from './tools/transformTools.js';
 import { registerCreateMaterialTool, registerAssignMaterialTool, registerModifyMaterialTool, registerGetMaterialInfoTool } from './tools/materialTools.js';
 import { registerDuplicateGameObjectTool, registerDeleteGameObjectTool, registerReparentGameObjectTool } from './tools/gameObjectTools.js';
 import { registerBatchExecuteTool } from './tools/batchExecuteTool.js';
+import { registerSetAssetReferenceTool } from './tools/setAssetReferenceTool.js';
+import { registerFindAssetsTool } from './tools/findAssetsTool.js';
+import { registerGetAnimatorInfoTool, registerModifyAnimatorParameterTool, registerModifyBlendTreeTool } from './tools/animatorTools.js';
+import { registerConfigurePhysicsTool } from './tools/physicsTools.js';
 import { registerGetMenuItemsResource } from './resources/getMenuItemResource.js';
 import { registerGetConsoleLogsResource } from './resources/getConsoleLogsResource.js';
 import { registerGetHierarchyResource } from './resources/getScenesHierarchyResource.js';
@@ -87,6 +91,14 @@ registerCreateMaterialTool(server, mcpUnity, toolLogger);
 registerAssignMaterialTool(server, mcpUnity, toolLogger);
 registerModifyMaterialTool(server, mcpUnity, toolLogger);
 registerGetMaterialInfoTool(server, mcpUnity, toolLogger);
+
+// Register Custom Tools
+registerSetAssetReferenceTool(server, mcpUnity, toolLogger);
+registerFindAssetsTool(server, mcpUnity, toolLogger);
+registerGetAnimatorInfoTool(server, mcpUnity, toolLogger);
+registerModifyAnimatorParameterTool(server, mcpUnity, toolLogger);
+registerModifyBlendTreeTool(server, mcpUnity, toolLogger);
+registerConfigurePhysicsTool(server, mcpUnity, toolLogger);
 
 // Register Batch Execute Tool (high-priority for performance)
 registerBatchExecuteTool(server, mcpUnity, toolLogger);

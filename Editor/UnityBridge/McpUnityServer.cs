@@ -411,6 +411,28 @@ namespace McpUnity.Unity
             GetMaterialInfoTool getMaterialInfoTool = new GetMaterialInfoTool();
             _tools.Add(getMaterialInfoTool.Name, getMaterialInfoTool);
 
+            // Register SetAssetReferenceTool
+            SetAssetReferenceTool setAssetReferenceTool = new SetAssetReferenceTool();
+            _tools.Add(setAssetReferenceTool.Name, setAssetReferenceTool);
+
+            // Register FindAssetsTool
+            FindAssetsTool findAssetsTool = new FindAssetsTool();
+            _tools.Add(findAssetsTool.Name, findAssetsTool);
+
+            // Register Animator Tools
+            GetAnimatorInfoTool getAnimatorInfoTool = new GetAnimatorInfoTool();
+            _tools.Add(getAnimatorInfoTool.Name, getAnimatorInfoTool);
+
+            ModifyAnimatorParameterTool modifyAnimatorParameterTool = new ModifyAnimatorParameterTool();
+            _tools.Add(modifyAnimatorParameterTool.Name, modifyAnimatorParameterTool);
+
+            ModifyBlendTreeTool modifyBlendTreeTool = new ModifyBlendTreeTool();
+            _tools.Add(modifyBlendTreeTool.Name, modifyBlendTreeTool);
+
+            // Register Physics Tools
+            ConfigurePhysicsTool configurePhysicsTool = new ConfigurePhysicsTool();
+            _tools.Add(configurePhysicsTool.Name, configurePhysicsTool);
+
             // Register BatchExecuteTool (must be registered last as it needs access to other tools)
             BatchExecuteTool batchExecuteTool = new BatchExecuteTool(this);
             _tools.Add(batchExecuteTool.Name, batchExecuteTool);
